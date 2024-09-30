@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<products>
+	<product name="product 1">
+		<price badge="Euro">29.99</price>
+		<stock color="blue" storage="22">32</stock>
+		<units>
+			<unit>
+				<section>A3</section>
+				<number>455G</number>
+			</unit>
+			<unit>
+				<section>C1</section>
+				<number>898H</number>
+			</unit>
+		</units>
+	</product>
+	<product name="product 2">
+		<price badge="Dollar">14.95</price>
+		<stock color="red" storage="40">21</stock>
+		<units>
+			<unit>
+				<section>F6</section>
+				<number>2323J</number>
+			</unit>
+			<unit>
+				<section>C3</section>
+				<number>988F</number>
+			</unit>
+		</units>
+	</product>
+</products>
