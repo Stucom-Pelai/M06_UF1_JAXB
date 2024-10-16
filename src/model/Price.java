@@ -5,7 +5,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name="price")
 public class Price {
-	@XmlAttribute(name="badge")
 	private String badge;
 	
 	public Price() {};
@@ -14,6 +13,11 @@ public class Price {
 		this.badge = badge;
 	}
 
+	public void setBadge(String badge) {
+		this.badge = badge;
+	}
+
+	@XmlAttribute(name="badge")
 	public String getBadge() {
 		return badge;
 	}

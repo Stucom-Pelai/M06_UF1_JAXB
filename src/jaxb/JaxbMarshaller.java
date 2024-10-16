@@ -8,6 +8,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
 import model.Price;
+import model.Unit;
 import model.Product;
 import model.ProductList;
 import model.Stock;
@@ -29,12 +30,16 @@ public class JaxbMarshaller {
 	private ProductList createXml() {
 		
 		ArrayList<Product> products = new ArrayList<>();
+		ArrayList<Unit> units = new ArrayList<>();
+		units.add(new Unit("S1","N1"));
+		units.add(new Unit("S2","N2"));
+		units.add(new Unit("S3","N3"));
 		
-		products.add(new Product("Prod 1", new Price("Pound"), new Stock("12","orange")));
-		products.add(new Product("Prod 2", new Price("Dollar"), new Stock("56","brown")));
-		products.add(new Product("Prod 3", new Price("Euro"), new Stock("62","yellow")));
-		products.add(new Product("Prod 4", new Price("Dollar"), new Stock("806","green")));
-		products.add(new Product("Prod 5", new Price("Euro"), new Stock("50","dark blue")));
+		products.add(new Product("Prod 1", new Price("Pound"), new Stock("12","orange"),units));
+		products.add(new Product("Prod 2", new Price("Dollar"), new Stock("56","brown"),units));
+		products.add(new Product("Prod 3", new Price("Euro"), new Stock("62","yellow"),units));
+		products.add(new Product("Prod 4", new Price("Dollar"), new Stock("806","green"),units));
+		products.add(new Product("Prod 5", new Price("Euro"), new Stock("50","dark blue"),units));
 		
 		// print products
 		for (Product p : products) {
